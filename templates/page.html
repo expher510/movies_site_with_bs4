@@ -1,0 +1,24 @@
+{%extends "layout.html"%}
+
+{%block body%}
+    <div class="container">
+        <!-- <h1>{{var}}</h1> -->
+        {%for i in mdata%}
+        <form action="/" method="post">
+       <button type="submit" value="{{i[4]}}" name="btn_link">
+            <div class="movie-card">
+                <img src="{{i[2]}}" alt="movie poster" class="movie-poster1">
+                 <div class="movie-info">
+                     <h1 class="movie-title">{{i[1]}}</h1>
+                 </div>
+            </div>
+        </button>
+    </form>
+        {%endfor%}
+
+            </div>
+
+
+
+
+{%endblock%}
